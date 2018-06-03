@@ -60,3 +60,8 @@ ENTER
 The long PowerShell script creates the hidden PowerShell window that listens
 for keystrokes (our minified annoying script in this case) and then runs them
 when it receives and Enter key.
+
+# Licence
+
+This script is licensed MIT *except* for the minification folder which
+contains a script that is MPL 1.1 licensed - see in there for details.
