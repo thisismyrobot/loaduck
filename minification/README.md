@@ -27,6 +27,6 @@ Under the conditions of the licence I think I need to:
  * State changes - none made to the minJS.psm1.
  * Disclose source - see above.
  * Include notice - I think this means the MPL in the source, which it's not  
-   in the original so I am not adding.
+   in the original so I am not adding it here.
 
 https://tldrlegal.com/license/mozilla-public-license-1.1-(mpl-1.1)
