@@ -1,7 +1,7 @@
 <#
     Changes by Robert Wallhead (thisismyrobot)
 
-    https://github.com/thisismyrobot/loaduck/compare/4bd150a...master
+    https://github.com/thisismyrobot/loaduck/compare/4bd150a...master#diff-d36e9afee0b578300581569656ccd2da
 #>
 function Invoke-Encode
 {
