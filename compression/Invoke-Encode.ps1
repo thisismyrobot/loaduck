@@ -1,4 +1,6 @@
 <#
+    Invoke-Encode.ps1 from https://github.com/samratashok/nishang
+
     Changes by Robert Wallhead (thisismyrobot)
 
     https://github.com/thisismyrobot/loaduck/compare/4bd150a...master#diff-d36e9afee0b578300581569656ccd2da
