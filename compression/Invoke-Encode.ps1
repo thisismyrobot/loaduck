@@ -1,3 +1,8 @@
+<#
+    Changes by Robert Wallhead (thisismyrobot)
+
+    https://github.com/thisismyrobot/loaduck/compare/4bd150a...master
+#>
 function Invoke-Encode
 {
 <#
@@ -113,18 +118,18 @@ https://github.com/samratashok/nishang
     if (($OutCommand -eq $True) -or ($PostScriptCommand -eq $True))
     {
         #http://www.darkoperator.com/blog/2013/3/21/powershell-basics-execution-policy-and-code-signing-part-2.html
-        $command = "Invoke-Expression `$(New-Object IO.StreamReader (" +
+        $command = "`sal n New-Object;iex `$(n IO.StreamReader(" +
 
-        "`$(New-Object IO.Compression.DeflateStream (" +
+        "`$(n IO.Compression.DeflateStream(" +
 
-        "`$(New-Object IO.MemoryStream (,"+
+        "`$(n IO.MemoryStream(,"+
 
         "`$([Convert]::FromBase64String('$Compressed')))), " +
 
         "[IO.Compression.CompressionMode]::Decompress)),"+
 
-        " [Text.Encoding]::ASCII)).ReadToEnd();"
         
+        "[Text.Encoding]::ASCII)).ReadToEnd();"
         #Generate Base64 encoded command to use with the powershell -encodedcommand paramter"
         $UnicodeEncoder = New-Object System.Text.UnicodeEncoding
         $EncScript = [Convert]::ToBase64String($UnicodeEncoder.GetBytes($command))
