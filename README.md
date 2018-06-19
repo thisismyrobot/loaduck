@@ -59,6 +59,6 @@ when it receives and Enter key.
 Borrowed from https://github.com/samratashok/nishang - that file remains GPL
 licensed.
 
-Small modifications have been made to reduce the final script size - see
+Modifications have been made to reduce the final script size - see
 https://github.com/thisismyrobot/loaduck/compare/4bd150a...master#diff-d36e9afee0b578300581569656ccd2da
 for those changes.
