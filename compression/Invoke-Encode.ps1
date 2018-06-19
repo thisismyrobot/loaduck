@@ -126,10 +126,10 @@ https://github.com/samratashok/nishang
 
         "`$([Convert]::FromBase64String('$Compressed'))))," +
 
-        "[IO.Compression.CompressionMode]::Decompress)),"+
+        "[IO.Compression.CompressionMode]::Decompress))"+
 
         
-        "[Text.Encoding]::ASCII)).ReadToEnd();"
+        ")).ReadToEnd();"
         #Generate Base64 encoded command to use with the powershell -encodedcommand paramter"
         $UnicodeEncoder = New-Object System.Text.UnicodeEncoding
         $EncScript = [Convert]::ToBase64String($UnicodeEncoder.GetBytes($command))
