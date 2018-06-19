@@ -128,7 +128,6 @@ https://github.com/samratashok/nishang
 
         "[IO.Compression.CompressionMode]::Decompress))"+
 
-        
         ")).ReadToEnd();"
         #Generate Base64 encoded command to use with the powershell -encodedcommand paramter"
         $UnicodeEncoder = New-Object System.Text.UnicodeEncoding
